@@ -26,5 +26,6 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -S --quiet --noconfirm --noprogressbar \
     jdk8-openjdk \
   && pacman -Sc --quiet --noconfirm --noprogressbar
+ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
 
 CMD ["/bin/bash"]
