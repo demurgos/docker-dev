@@ -4,6 +4,7 @@ MAINTAINER Charles Samborski <demurgos@demurgos.net>
 RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -S --quiet --noconfirm --noprogressbar \
     coreutils \
+    expect \
     gcc \
     git \
     make \
