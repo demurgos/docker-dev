@@ -1,0 +1,29 @@
+FROM base/archlinux:latest
+MAINTAINER Charles Samborski <demurgos@demurgos.net>
+
+RUN pacman -Syu --quiet --noconfirm --noprogressbar \
+  && pacman -S --quiet --noconfirm --noprogressbar \
+    coreutils \
+    gcc \
+    git \
+    make \
+    neko \
+    ocaml \
+    pcre \
+    xorg-server-xvfb \
+    zlib \
+  && pacman -Sc --quiet --noconfirm --noprogressbar
+
+RUN pacman -Syu --quiet --noconfirm --noprogressbar \
+  && pacman -S --quiet --noconfirm --noprogressbar \
+    nodejs \
+    npm \
+  && npm install -g npm gulp-cli \
+  && pacman -Sc --quiet --noconfirm --noprogressbar
+
+RUN pacman -Syu --quiet --noconfirm --noprogressbar \
+  && pacman -S --quiet --noconfirm --noprogressbar \
+    jdk8-openjdk \
+  && pacman -Sc --quiet --noconfirm --noprogressbar
+
+CMD ["/bin/bash"]
