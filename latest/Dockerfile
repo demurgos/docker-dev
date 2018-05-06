@@ -19,12 +19,13 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -S --quiet --noconfirm --noprogressbar \
     nodejs \
     npm \
+    yarn \
   && npm install -g npm gulp-cli \
   && pacman -Sc --quiet --noconfirm --noprogressbar
 
 RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -S --quiet --noconfirm --noprogressbar \
-    jdk8-openjdk \
+    jdk9-openjdk \
   && pacman -Sc --quiet --noconfirm --noprogressbar
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
 
