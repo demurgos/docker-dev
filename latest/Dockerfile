@@ -29,4 +29,10 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -Sc --quiet --noconfirm --noprogressbar
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
 
+
+RUN node --version \
+  && npm --version \
+  && yarn --version \
+  && gulp --version
+
 CMD ["/bin/bash"]
