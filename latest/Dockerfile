@@ -5,30 +5,24 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
   && pacman -S --quiet --noconfirm --noprogressbar \
     coreutils \
     expect \
+    jdk9-openjdk \
     gcc \
     git \
     make \
     neko \
+    nodejs \
+    npm \
     ocaml \
     pcre \
+    unzip \
     xorg-server-xvfb \
+    yarn \
     zlib \
   && pacman -Sc --quiet --noconfirm --noprogressbar
 
-RUN pacman -Syu --quiet --noconfirm --noprogressbar \
-  && pacman -S --quiet --noconfirm --noprogressbar \
-    nodejs \
-    npm \
-    yarn \
-  && npm install -g npm gulp-cli \
-  && pacman -Sc --quiet --noconfirm --noprogressbar
+RUN npm install -g npm gulp-cli
 
-RUN pacman -Syu --quiet --noconfirm --noprogressbar \
-  && pacman -S --quiet --noconfirm --noprogressbar \
-    jdk9-openjdk \
-  && pacman -Sc --quiet --noconfirm --noprogressbar
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
-
 
 RUN node --version \
   && npm --version \
