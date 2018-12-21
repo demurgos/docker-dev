@@ -17,8 +17,9 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
     unzip \
     xorg-server-xvfb \
     yarn \
-    zlib \
-  && pacman -Sc --quiet --noconfirm --noprogressbar
+    zlib
+# TODO: Check if we need to empty the cache ourselves or not
+#  && pacman -Sc --quiet --noconfirm --noprogressbar
 
 RUN npm install -g npm gulp-cli
 
