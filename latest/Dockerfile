@@ -6,6 +6,7 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
     coreutils \
     expect \
     jdk10-openjdk \
+    jq \
     gcc \
     git \
     make \
