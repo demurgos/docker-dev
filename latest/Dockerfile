@@ -1,4 +1,4 @@
-FROM base/archlinux:latest
+FROM archlinux/base:latest
 MAINTAINER Charles Samborski <demurgos@demurgos.net>
 
 RUN pacman -Syu --quiet --noconfirm --noprogressbar \
