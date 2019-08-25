@@ -18,7 +18,7 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
     unzip \
     xorg-server-xvfb \
     yarn \
-    zlib
+    zlib \
   && pacman -Sc --quiet --noconfirm --noprogressbar
 
 RUN npm install -g npm gulp-cli
