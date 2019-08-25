@@ -16,6 +16,7 @@ RUN pacman -Syu --quiet --noconfirm --noprogressbar \
     ocaml \
     pcre \
     unzip \
+    which \
     xorg-server-xvfb \
     yarn \
     zlib
